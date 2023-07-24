@@ -2,7 +2,7 @@
 This is, where LUA plugins for MA3 might go...
 Still work in progress...
 
-# Search sequences for fixture
+# in which seq (Search sequences for fixture)
 In lack of a search-feature on MA3 1.9.3.3 this plugin was created to be able to answer the question "where is fixture x used?".
 This is especially an important question when working with conventionl fixtures, that need to be focused manually and can't be used for more than one position inside the show.
 This is often the case in TV-studios or theaters using conventional fresnel or spots without remote-controlled Pan/Tilt-joke.

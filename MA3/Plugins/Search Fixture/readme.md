@@ -26,7 +26,7 @@ Depending on the amount of sequences inside the pool the time the plugin needs t
 ## Limitations
 This plugin only searches sequences (no presets, groups etc.) and can only look for one fixture at a time (might be adapted to look for several fixtures but then it's hard to distinguish which fixture is used in which sequence). Also only fixture-IDs are supported, no customIDs.
 Also individual cues and parts inside a sequence are not reported in detail. This might be added but in lack of (knowledge of) clean LUA functions this might mess up the commandline history a lot. In my case, there is no need for such deep scan. If it's important to know, in which cue the fixture is stored, just select the sequence and take a look at the tracking sheet. In my case most sequences just have one cue (TV lighting workflow).
-The result
+The result is only shown in a dialog like in the picture above. The result can not be used for other commands or stored or copied to other users or nything like that.
 
 ## Todo/ideas
 Because LUA is documented worst in MA3, it's hard to find the right function/object that might offer the needed data. Thus the plugin uses some commandline-commands, which makes the output very untidy inside the commandline history. This may be cleaned up in the future... 

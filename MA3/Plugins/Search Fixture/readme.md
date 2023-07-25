@@ -16,6 +16,7 @@ It runs thru all the sequences inside the selected datapool and reports sequence
 ## Usage
 Using the plugin may start in two ways.
 1. Select a fixture, then start the plugin. It will use the current selection.
+-or-
 2. Start the plugin without any fixtures selected. Then the plugin will first ask for a fixture-number by a dialog.
 ### result
 The result will be given in a dialog like this:
@@ -24,7 +25,7 @@ The result will be given in a dialog like this:
 Depending on the amount of sequences inside the pool the time the plugin needs to search all sequences differs. A progressbar will be shown.
 
 ## Limitations
-This plugin only searches sequences (no presets, groups etc.) and can only look for one fixture at a time (might be adapted to look for several fixtures but then it's hard to distinguish which fixture is used in which sequence). Also only fixture-IDs are supported, no customIDs.
+This plugin only searches sequences (no presets, groups etc.) inside the selected datapool and can only look for one fixture at a time (might be adapted to look for several fixtures but then it's hard to distinguish which fixture is used in which sequence). Also only fixture-IDs are supported, no customIDs. If the current selection has more than one fixture, the first fixture inside the selection might be used.
 Also individual cues and parts inside a sequence are not reported in detail. This might be added but in lack of (knowledge of) clean LUA functions this might mess up the commandline history a lot. In my case, there is no need for such deep scan. If it's important to know, in which cue the fixture is stored, just select the sequence and take a look at the tracking sheet. In my case most sequences just have one cue (TV lighting workflow).
 The result is only shown in a dialog like in the picture above. The result can not be used for other commands or stored or copied to other users or nything like that.
 
@@ -35,8 +36,10 @@ Because LUA is documented worst in MA3, it's hard to find the right function/obj
 If you just need to know, if a selected fixture is stored inside any sequence - without the information, which sequence - then a simple "- seq thru" inside the commandline will to the same job. Result will be: if the fixture is removed from the selection, it's stored in at least one sequence.
 
 ## (known) Bugs
-Because this plugin was created for a specific installation there might occur some errors in your special situation. Feel free to take a look at the sourcecode if you are used to LUA. 
-Or you may open an issue. Maybe I find some time to fix it, but don't expect a 24/7-support. This tool is provided as is
+It's not tested with subfixtures.
+Because this plugin was created for a specific installation there might occur some errors in your special situation. Feel free to take a look at the sourcecode - if you are used to LUA - and fix it yourself.
+Or you may open an issue. Maybe I find some time to fix it, but don't expect a 24/7-support. This tool is provided as is.
 
 # ! WARNING !
-If the plugin breaks because of any error, the progressbar might not be closed and stick on the screen. I have no clue how to remove it other than with a restart of the console. So test the plugin first and don't use it in live-situations!
+The programmer is cleared by the plugin! So store things first, if needed!
+If the plugin breaks because of any error, the progressbar might not be closed and stick on the screen. I have no clue how to remove it other than with a restart of the console. So test the plugin first and don't use it in live-situations! No warranty given!
